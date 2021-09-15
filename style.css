@@ -1,0 +1,157 @@
+/* Set-Up */
+:root {
+    --primary: #337a7e;
+    --secondary: #d5c78a;
+    --text: #181112;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1 0 auto;
+}
+
+/* End of Set-Up Section */
+
+/* Header Section */
+.header-section, .footer {
+    color: #fff;
+}
+
+.header-section {
+    background: var(--primary);
+    padding: 1rem 0;
+}
+
+.name, .job-title {
+    text-align: center;
+}
+
+/* End of Header Section */
+
+/* Image and Social Media Section */
+.img-sm-section {
+    display: flex;
+}
+
+.sm {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: auto;
+    align-self: center;
+}
+
+.sm-header {
+    margin-bottom: 0.5rem;
+}
+
+.sm .icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0.3rem 0.2rem #ccc;
+    text-align: center;
+    margin: 1rem 2rem;
+}
+
+/* End of Image and Social Media Section */
+
+/* Skills Section */
+.skills-title {
+    text-align: center;
+}
+
+.skills-section {
+    display: flex;
+    width: 100%;
+}
+
+.skills {
+    display: flex;
+    margin: 0 auto;
+}
+
+.skills li {
+    margin: 0.5rem 2rem;
+}
+
+
+/* End of Skills Section */
+
+
+/* Repo Section */
+.repo-section {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+#repo-item {
+    display: flex;
+    flex: 1fr 1fr;
+}
+
+/* End of Repo Section */
+
+/* Footer Section */
+.footer {
+    flex-shrink: 0;
+    z-index: 99;
+    /*
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary);
+    padding: 1rem;
+    */
+}
+
+.contact {
+    display: flex;
+}
+
+.phone-number {
+    width: 50ch;
+}
+
+.email {
+    float: right;
+    margin-left: 70%;
+}
+
+@media screen and (min-width: 480) {
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    img {
+        margin: 0 auto;
+    }
+
+    .email {
+        margin-left: 25%;
+    }
+}
